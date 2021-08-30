@@ -14,9 +14,7 @@ function validateFolderName(name) {
 function calulcateProgressSteps(settings) {
   let steps = 3; // 1: Create main folder; 2: Init npm; 3: Create subfolders and files...
   settings.choices.customChoices.forEach((choice) => {
-    if (choice) {
-      steps++; // For each npm package to install add 1...
-    }
+    steps++; // For each npm package to install add 1...
   });
   return steps;
 }
@@ -120,8 +118,7 @@ async function install(settings) {
               (i + 1).toString() +
               " of " +
               settings.choices.customChoices.length
-            ).grey,
-          i === settings.choices.length - 1 ? true : false
+            ).grey
         ); // Step 4+...
       } catch (err) {
         settings.errors.push({
@@ -131,6 +128,9 @@ async function install(settings) {
         });
       }
     }
+
+    if (calulcateProgressSteps(settings) > 3)
+      await addPercentToProgress(1, "Done", true); // Choices count is 0
 
     resolve();
   });
