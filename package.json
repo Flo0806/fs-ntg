@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "description": "Create Project Structure",
   "main": "./index.js",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
     "fs-ntg": "./index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flo0806/fs-ntg.git"
+  },
+  "homepage": "https://github.com/Flo0806/fs-ntg#readme",
   "engines": {
     "node": ">=8.10.0"
   },
