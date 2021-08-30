@@ -1,0 +1,8 @@
+{
+  "choices": {
+    "showDefault": true,
+    "customChoices": [
+      { "name": "react-markdown ImageSize", "npm": "fs-imagesize" }
+    ]
+  }
+}

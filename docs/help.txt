@@ -1,0 +1,9 @@
+### HELP
+
+commands:
+   help .............. show help commands
+   v, --version ...... show current version
+ 
+config
+  add ntg.json to root directory with all settings you need 
+

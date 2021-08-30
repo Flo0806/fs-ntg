@@ -1,0 +1,24 @@
+{
+  "name": "fs-ntg",
+  "version": "0.1.0",
+  "description": "Create Project Structure",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "fs-ntg": "./index.js"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "author": "Florian Heuberger",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "prompt": "^1.1.0",
+    "prompts": "^2.4.1",
+    "yargs": "^17.1.1"
+  }
+}
