@@ -6,6 +6,8 @@ const { createChoisePrompt } = require("../helpers/create-choice-prompt");
 const { createInputPrompt } = require("../helpers/create-input-promt");
 const { install } = require("../helpers/install_modules");
 
+const pjson = require("../package.json");
+
 function Log(text, color, bgColor = colors.bgBlack, styles = colors.reset) {
   console.log(text[color][bgColor][styles]);
 }
@@ -41,7 +43,12 @@ function ntg(settings) {
   drawLogo();
   runArgCommands(settings);
 
-  Log("-= NODE TEMPLATE GENERATOR =-", "red", "bgYellow", "bold");
+  Log(
+    "-= NODE TEMPLATE GENERATOR v" + pjson.version + "=-",
+    "red",
+    "bgYellow",
+    "bold"
+  );
   console.log();
   //createProgressbar();
   //addPercentToProgress(15, "Te");

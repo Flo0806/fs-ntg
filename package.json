@@ -1,6 +1,6 @@
 {
   "name": "fs-ntg",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Create Project Structure",
   "main": "./index.js",
   "private": false,

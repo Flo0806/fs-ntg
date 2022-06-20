@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const pjson = require("../package.json");
 
 function runArgCommands(settings) {
   // Setup standard settings
@@ -10,6 +11,9 @@ function runArgCommands(settings) {
   if (settings.help) {
     var dir = path.join(__dirname, "..", "docs", "help.txt");
     var body = fs.readFileSync(dir, "utf8");
+    process.exit(0);
+  } else if (settings.version) {
+    console.log(pjson.version);
     process.exit(0);
   } else if (settings.config) {
     if (fs.existsSync(path.join(__dirname, "..", "ntg.json"))) {

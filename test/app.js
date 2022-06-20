@@ -20,5 +20,7 @@ app.use((req, res, next) => {
 });
 
 // Add your routes here (app.use("/route", importedRoute);)
-
+app.get("/", (req, res, next) => {
+  res.json({ message: "test" });
+});
 module.exports = app;
